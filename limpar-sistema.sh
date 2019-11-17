@@ -11,3 +11,4 @@ sudo apt-get upgrade -y
 
 # removendo libreoffice
 sudo apt-get purge --auto-remove libreoffice-* -y
+sudo apt remove --purge gnome-keyring -y
