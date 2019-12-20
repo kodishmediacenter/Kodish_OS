@@ -27,6 +27,7 @@ sudo apt-get install kodi-audioencoder-* -y
 sudo apt-get install kodi-game-* -y
 sudo apt-get install vlc -y
 wget https://dl.strem.io/linux/v4.4.54/stremio_4.4.52-1_amd64.deb
+dpkg -i stremio_4.4.52-1_amd64.deb
 sudo apt-get install -f
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
