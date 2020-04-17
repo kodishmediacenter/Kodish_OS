@@ -1,0 +1,3 @@
+Para receber atualizações da kodish para seu linux tem fazer esse comando 
+
+sudo ln -s /home/kodish/.kodi /home/usuario
