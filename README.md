@@ -3,6 +3,14 @@ Repo Oficial do Sistema Operacional
 
 # Link Para Download
 
+# Kodish OS 7
+
+# Link 1
+https://mega.nz/file/by5jGaTL#Sr3qWwaIn7sWnBMx5JSiNqC_VC_g5FC_SK1iuxXzCqE
+
+# Compatibilidade
+Funciona como pre-requisito Dual Core com 2 GB RAM e 32 GB (Processadores 64x)
+
 # Kodish OS 6 
 
 # Link 1 
