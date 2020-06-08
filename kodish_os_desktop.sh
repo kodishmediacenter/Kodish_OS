@@ -2,6 +2,9 @@
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
+# Removendo programas lubuntu
+sudo apt-get remove --purge trojita
+
 # Removendo programas do Kodish 
 #sudo apt-get remove --purge libreoffice* -y
 #sudo apt-get remove --purge firefox -y
