@@ -1,6 +1,5 @@
 # Removendo programas do Kodish 
 sudo apt-get remove --purge libreoffice* -y
-sudo apt-get remove --purge firefox -y
 sudo apt-get purge --auto-remove thunderbird -y 
 sudo apt-get purge --auto-remove pidgin -y
 sudo apt remove --purge gnome-keyring -y
