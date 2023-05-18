@@ -46,5 +46,5 @@ sudo echo "alias stremio='flatpak run com.stremio.Stremio'" >> /etc/skel/.bashrc
 
 # atualizando terminal
 
-cat /etc/skel/.bashrc > $t/.bashrc 
+sudo cat /etc/skel/.bashrc > $t/.bashrc 
 
