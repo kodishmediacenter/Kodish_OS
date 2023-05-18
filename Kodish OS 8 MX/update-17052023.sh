@@ -27,11 +27,8 @@ sudo chmod -R 755 /var/cache/man/
 
 # pegar home e atualizar os atalhos do menu iniciar 
 
-t=$HOME 
-cd $t/.config/xfce4/panel/
-wget https://pastebin.com/raw/FbYYcai8
-rm -r whiskermenu-1.rc
-mv FbYYcai8 whiskermenu-1.rc
+wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/master/Kodish%20OS%208%20MX/menu-create.sh
+sudo sh menu-create.sh
 
 sudo echo '' >> /etc/skel/.bashrc
 sudo echo "alias update='wget https://tinyurl.com/3kyssphv && mv 3kyssphv update-mx.sh && sh update-mx.sh'" >> /etc/skel/.bashrc
