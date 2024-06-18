@@ -1,0 +1,72 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: meu-servidor
+    username: usuario
+    password: "$6$rounds=4096$salto$ZKtmQJH0DFAiy3LLvIaUs9xHBeYhQn.XgHa3.AykgJ.yS7l/p6aXPS/mQjEV7jZ7N1Qck2qZ1hH1VV/QbPq/v0"
+  ssh:
+    install-server: yes
+    authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7A1QI5Y9...
+  locale: pt_BR.UTF-8
+  keyboard:
+    layout: pt
+    variant: br
+  storage:
+    layout:
+      name: direct
+      match:
+        size: largest
+    config:
+      - id: disk0
+        type: disk
+        match:
+          size: largest
+        ptable: gpt
+        wipe: superblock-recursive
+        preserve: false
+        grub_device: true
+        name: ''
+        serial: ''
+        path: ''
+        dev: ''
+      - id: partition0
+        type: partition
+        device: disk0
+        size: -1
+        flag: ''
+        number: 1
+        preserve: false
+        wipe: superblock
+        name: ''
+        grub_device: true
+      - id: format0
+        type: format
+        fstype: ext4
+        volume: partition0
+        preserve: false
+        label: ''
+        uuid: ''
+      - id: mount0
+        type: mount
+        device: format0
+        path: /
+  apt:
+    primary:
+      - arches: [amd64]
+        uri: http://archive.ubuntu.com/ubuntu
+  packages:
+    - openssh-server
+    - vim
+    - flatpak
+  user-data:
+    disable_root: false
+  late-commands:
+    - curtin in-target --target=/target flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  bootcmd:
+    - echo "Instalação automática do Ubuntu 24.04 iniciada."
+  reporting:
+    hook:
+      type: webhook
+      endpoint: http://meu-servidor-de-relatorio.example.com/relatorio
