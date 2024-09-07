@@ -37,7 +37,9 @@ sudo pacman -U flex-launcher-2.1-1-x86_64.pkg.tar.zst
 
 # Deixar Arch Linux em PT_BR
 sudo echo '' >> /etc/locale.gen
+sudo locale-gen
 sudo echo 'pt_BR.UTF-8 UTF-8' >> /etc/locale.gen
+sudo export LANG=pt_BR.UTF-8
 
 # Removendo apps 
 sudo pacman -Rs xfce4-dict 
