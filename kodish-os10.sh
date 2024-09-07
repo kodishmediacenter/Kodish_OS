@@ -35,6 +35,10 @@ sudo flatpak install flathub org.chromium.Chromium
 wget https://github.com/complexlogic/flex-launcher/releases/download/v2.1/flex-launcher-2.1-1-x86_64.pkg.tar.zst
 sudo pacman -U flex-launcher-2.1-1-x86_64.pkg.tar.zst
 
+# Deixar Arch Linux em PT_BR
+sudo echo '' >> /etc/locale.gen
+sudo echo 'pt_BR.UTF-8 UTF-8' >> /etc/locale.gen
+
 # Removendo apps 
 sudo pacman -Rs xfce4-dict 
 sudo pacman -Rs ristretto 
