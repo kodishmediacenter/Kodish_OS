@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo pacman -S xfce4 xfce4-goodies
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo pacman -S kodi
