@@ -9,6 +9,7 @@ sudo pacman -S networkmanager
 sudo pacman -S firefox
 sudo pacman -S gparted
 sudo pacman -S wget
+sudo pacman -S flatpak
 
 # Instalando Bluetooth
 sudo pacman -S bluez bluez-utils blueman
