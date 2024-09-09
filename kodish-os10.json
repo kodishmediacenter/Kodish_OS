@@ -1,0 +1,59 @@
+{
+  "language": "pt_BR",
+  "keyboard_layout": "br-abnt2",
+  "mirror-region": "Brazil",
+  "bootloader": "grub-install",
+  "partitions": {
+    "disk": "ask",             // Deixa o usuário escolher o disco
+    "layout": "ask",           // Deixa o usuário escolher o layout de particionamento
+    "wipe": "ask"              // Pergunta se o usuário deseja limpar o disco
+  },
+  "profile": "desktop",
+  "hostname": "kodish-os",
+  "username": "usuario",
+  "password": "senha-segura",
+  "packages": [
+    "xfce4",
+    "xfce4-goodies",
+    "lightdm",
+    "lightdm-gtk-greeter",
+    "kodi",
+    "kodi-gles",
+    "asunder",
+    "networkmanager",
+    "firefox",
+    "gparted",
+    "wget",
+    "flatpak",
+    "bluez",
+    "bluez-utils",
+    "blueman"
+  ],
+  "services": {
+    "enabled": [
+      "lightdm.service",
+      "bluetooth.service",
+      "NetworkManager.service"
+    ]
+  },
+  "post_install": {
+    "commands": [
+      "echo '' >> /etc/bluetooth/main.conf",
+      "echo 'AutoEnable=true' >> /etc/bluetooth/main.conf",
+      "systemctl start bluetooth",
+      "flatpak install -y flathub com.obsproject.Studio",
+      "flatpak install -y flathub com.stremio.Stremio",
+      "flatpak install -y flathub org.chromium.Chromium",
+      "wget https://github.com/complexlogic/flex-launcher/releases/download/v2.1/flex-launcher-2.1-1-x86_64.pkg.tar.zst",
+      "pacman -U --noconfirm flex-launcher-2.1-1-x86_64.pkg.tar.zst",
+      "echo '' >> /etc/locale.gen",
+      "echo 'pt_BR.UTF-8 UTF-8' >> /etc/locale.gen",
+      "locale-gen",
+      "export LANG=pt_BR.UTF-8",
+      "pacman -Rs --noconfirm xfce4-dict",
+      "pacman -Rs --noconfirm ristretto",
+      "pacman -Rs --noconfirm parole",
+      "pacman -Rs --noconfirm bvnc"
+    ]
+  }
+}
