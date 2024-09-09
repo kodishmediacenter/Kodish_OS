@@ -10,8 +10,8 @@
   },
   "profile": "desktop",
   "hostname": "kodish-os",
-  "username": "usuario",
-  "password": "senha-segura",
+  "username": "kodish",
+  "password": "kodish",
   "packages": [
     "xfce4",
     "xfce4-goodies",
