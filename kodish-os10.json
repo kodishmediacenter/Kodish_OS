@@ -4,9 +4,9 @@
   "mirror-region": "Brazil",
   "bootloader": "grub-install",
   "partitions": {
-    "disk": "ask",             // Deixa o usuário escolher o disco
-    "layout": "ask",           // Deixa o usuário escolher o layout de particionamento
-    "wipe": "ask"              // Pergunta se o usuário deseja limpar o disco
+    "disk": "ask",            
+    "layout": "ask",           
+    "wipe": "ask"              
   },
   "profile": "desktop",
   "hostname": "kodish-os",
