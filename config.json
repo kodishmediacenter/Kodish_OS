@@ -1,0 +1,143 @@
+{
+    "config_version": "2.5.2",
+    "additional-repositories": [],
+    "archinstall-language": "English",
+    "audio_config": {"audio": "pipewire"},
+    "bootloader": "Systemd-boot",
+    "debug": false,
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/sda",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "flags": ["Boot"],
+                        "fs_type": "fat32",
+                        "size": {"sector_size": null, "unit": "MiB", "value": 512},
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "2c3fa2d5-2c79-4fab-86ec-22d0ea1543c0",
+                        "start": {"sector_size": null, "unit": "MiB", "value": 1},
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "size": {"sector_size": null, "unit": "GiB", "value": 20},
+                        "mount_options": [],
+                        "mountpoint": "/",
+                        "obj_id": "3e7018a0-363b-4d05-ab83-8e82d13db208",
+                        "start": {"sector_size": null, "unit": "MiB", "value": 513},
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "size": {"sector_size": null, "unit": "Percent", "value": 100},
+                        "mount_options": [],
+                        "mountpoint": "/home",
+                        "obj_id": "ce58b139-f041-4a06-94da-1f8bad775d3f",
+                        "start": {"sector_size": null, "unit": "GiB", "value": 20},
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "archlinux",
+    "kernels": ["linux"],
+    "keyboard-layout": "us",
+    "mirror-region": {
+        "Australia": {
+            "http://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch": true
+        }
+    },
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "xfce4", "xfce4-goodies", "lightdm", "lightdm-gtk-greeter", "kodi", "kodi-gles", "asunder", "networkmanager", "firefox", "gparted", "wget", "flatpak",
+        "bluez", "bluez-utils", "blueman"
+    ],
+    "post_install": [
+        {
+            "description": "Configurar Bluetooth",
+            "commands": [
+                "echo 'AutoEnable=true' >> /etc/bluetooth/main.conf",
+                "sudo systemctl start bluetooth",
+                "sudo systemctl enable bluetooth"
+            ]
+        },
+        {
+            "description": "Habilitar serviços essenciais",
+            "commands": [
+                "sudo systemctl enable lightdm.service",
+                "sudo systemctl enable networkmanager",
+                "sudo systemctl enable NetworkManager.service"
+            ]
+        },
+        {
+            "description": "Instalar flatpaks",
+            "commands": [
+                "sudo flatpak install flathub com.obsproject.Studio",
+                "sudo flatpak install flathub com.stremio.Stremio",
+                "sudo flatpak install flathub org.chromium.Chromium"
+            ]
+        },
+        {
+            "description": "Instalar Flex Launcher",
+            "commands": [
+                "wget https://github.com/complexlogic/flex-launcher/releases/download/v2.1/flex-launcher-2.1-1-x86_64.pkg.tar.zst",
+                "sudo pacman -U flex-launcher-2.1-1-x86_64.pkg.tar.zst"
+            ]
+        },
+        {
+            "description": "Configurar Arch Linux em PT_BR",
+            "commands": [
+                "echo 'pt_BR.UTF-8 UTF-8' >> /etc/locale.gen",
+                "sudo locale-gen",
+                "export LANG=pt_BR.UTF-8"
+            ]
+        },
+        {
+            "description": "Remover aplicativos",
+            "commands": [
+                "sudo pacman -Rs xfce4-dict",
+                "sudo pacman -Rs ristretto",
+                "sudo pacman -Rs parole",
+                "sudo pacman -Rs bvnc"
+            ]
+        }
+    ],
+    "profile_config": {
+        "gfx_driver": "All open-source (default)",
+        "greeter": "sddm",
+        "profile": {
+            "details": [],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": true,
+    "sys-encoding": "utf-8",
+    "sys-language": "en_US",
+    "timezone": "UTC",
+    "version": "2.5.2"
+}
