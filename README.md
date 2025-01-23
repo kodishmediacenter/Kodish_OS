@@ -3,6 +3,11 @@ Repo Oficial do Sistema Operacional
 
 # Link Para Download
 
+# Kodish OS 8 MX
+
+# Link 1
+https://drive.google.com/file/d/1_cagtXOAlSHlm2Dz-aJJmxw7K2k0o-do/view?usp=sharing
+
 # Kodish OS 7.1
 
 # Link 1
