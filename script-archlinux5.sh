@@ -1,4 +1,6 @@
 #!/bin/bash
+# Instala o reflector (não vem no ISO)
+pacman -Sy reflector wget
 
 set -e
 
