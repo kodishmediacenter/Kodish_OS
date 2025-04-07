@@ -43,8 +43,8 @@ mkdir -p /mnt/boot/efi
 mount "$EFI" /mnt/boot/efi
 
 # Mirrorlist BR
-pacman -Sy reflector
-reflector --country Brazil --protocol https --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+#pacman -Sy reflector
+#reflector --country Brazil --protocol https --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Pacotes principais
 pacstrap /mnt base linux linux-firmware vim sudo networkmanager grub efibootmgr os-prober mtools dosfstools
