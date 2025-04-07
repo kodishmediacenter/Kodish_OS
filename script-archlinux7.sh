@@ -15,7 +15,8 @@ read -rp "⚠️ TODOS OS DADOS EM $DISCO SERÃO APAGADOS! Deseja continuar? (s/
 [[ "$CONFIRMA" != "s" && "$CONFIRMA" != "S" ]] && exit 1
 
 # Limpa disco
-#wipefs -a "$DISCO"
+umount -R /mnt
+wipefs -a "$DISCO"
 
 # Particiona GPT
 parted "$DISCO" --script mklabel gpt
