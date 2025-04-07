@@ -6,6 +6,8 @@ set -e
 loadkeys br-abnt2
 timedatectl set-ntp true
 
+lsblk
+
 # Pergunta o disco a ser usado
 read -rp "Digite o disco para instalar (ex: /dev/sda, /dev/nvme0n1): " DISCO
 
