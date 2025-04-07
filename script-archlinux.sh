@@ -46,8 +46,8 @@ echo "archlinux" > /etc/hostname
 systemctl enable NetworkManager
 
 # Usuário padrão
-useradd -m -G wheel -s /bin/bash camila
-echo "camila:123456" | chpasswd
+useradd -m -G wheel -s /bin/bash kodish
+echo "kodish:kodish" | chpasswd
 echo "root:root" | chpasswd
 
 # Sudo
