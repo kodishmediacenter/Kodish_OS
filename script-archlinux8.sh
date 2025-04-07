@@ -43,7 +43,7 @@ mkdir -p /mnt/boot/efi
 mount "$EFI" /mnt/boot/efi
 
 # Mirrorlist BR
-pacman -Sy --noconfirm reflector
+pacman -Sy reflector
 reflector --country Brazil --protocol https --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Pacotes principais
