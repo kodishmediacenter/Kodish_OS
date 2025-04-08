@@ -74,7 +74,7 @@ systemctl enable NetworkManager
 # Usuário camila
 useradd -m -G wheel -s /bin/bash kodish
 echo "kodish:kodish" | chpasswd
-echo "roo:root" | chpasswd
+echo "root:root" | chpasswd
 echo '%wheel ALL=(ALL:ALL) ALL' > /etc/sudoers.d/wheel
 
 # Ativa detecção de outros sistemas (ex: Windows)
