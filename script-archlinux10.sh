@@ -91,6 +91,12 @@ pacman -Sy --noconfirm xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter fire
 # Ativa interface gráfica
 systemctl enable lightdm
 
+# Script rechecagem
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --removable --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
+efibootmgr -v
+
+
 EOF
 
 # ✅ Fim
