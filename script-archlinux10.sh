@@ -47,6 +47,8 @@ mount "$EFI" /mnt/boot/efi
 #reflector --country Brazil --protocol https --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Pacotes principais
+pacman -Sy archlinux-keyring --noconfirm
+rm -f /var/cache/pacman/pkg/*.zst
 pacstrap -K /mnt base linux linux-firmware vim sudo networkmanager grub efibootmgr os-prober mtools dosfstools --noconfirm
 
 # fstab
