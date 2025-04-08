@@ -12,7 +12,7 @@ timedatectl set-ntp true
 DISCO=$(lsblk -dpo NAME,SIZE,TYPE | grep -w disk | sort -k2 -h | tail -n1 | awk '{print $1}')
 echo "Disco detectado: $DISCO"
 read -rp "⚠️ TODOS OS DADOS EM $DISCO SERÃO APAGADOS! Deseja continuar? (s/N): " CONFIRMA
-[[ "$CONFIRMA" != "s" && "$CONFIRMA" != "S" ]] && exit 1
+[[ "$CONFIRMA" != "s" && "$CONFIRMA" != "S" ]] #&& exit 1
 
 # Limpa disco
 umount -R /mnt
