@@ -11,11 +11,11 @@ timedatectl set-ntp true
 # Detecta o maior disco
 DISCO=$(lsblk -dpo NAME,SIZE,TYPE | grep -w disk | sort -k2 -h | tail -n1 | awk '{print $1}')
 echo "Disco detectado: $DISCO"
-read -rp "⚠️ TODOS OS DADOS EM $DISCO SERÃO APAGADOS! Deseja continuar? (s/N): " CONFIRMA
-[[ "$CONFIRMA" != "s" && "$CONFIRMA" != "S" ]] #&& exit 1
+#read -rp "⚠️ TODOS OS DADOS EM $DISCO SERÃO APAGADOS! Deseja continuar? (s/N): " CONFIRMA
+# Desmonta /mnt se estiver montado (ignora erros caso não esteja montado)
+umount -R /mnt 2>/dev/null || true
 
-# Limpa disco
-umount -R /mnt
+# Limpa todas as assinaturas de sistema de arquivos no disco
 wipefs -a "$DISCO"
 
 # Particiona GPT
