@@ -136,6 +136,17 @@ XML
 chown -R kodish:kodish /home/kodish/.config
 systemctl enable lightdm
 
+# Extras
+pacman -S alsa-utils
+pacman -S pipewire pipewire-pulse wireplumber
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
+
+#
+pacman -Rs xfce4-dict 
+pacman -Rs ristretto 
+pacman -Rs parole
+pacman -Rs bvnc 
+
 EOF
 
 # ✅ Fim
