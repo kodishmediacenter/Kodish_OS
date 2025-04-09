@@ -46,7 +46,7 @@ mount "$EFI" /mnt/boot/efi
 pacman -Sy archlinux-keyring --noconfirm
 rm -f /var/cache/pacman/pkg/*.part
 rm -f /var/cache/pacman/pkg/libspqr* /var/cache/pacman/pkg/libbgm*
-pacman -Syyu --noconfirm
+pacman -Syu --noconfirm
 pacstrap /mnt base linux linux-firmware vim sudo networkmanager grub efibootmgr os-prober mtools dosfstools
 
 # fstab
