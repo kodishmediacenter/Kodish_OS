@@ -139,6 +139,8 @@ systemctl enable lightdm
 # Extras
 pacman -S --noconfirm alsa-utils
 pacman -S --noconfirm pipewire pipewire-pulse wireplumber zenity jq lutris
+pacman -S --noconfirm noto-fonts-cjk
+
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # Flatpak 
