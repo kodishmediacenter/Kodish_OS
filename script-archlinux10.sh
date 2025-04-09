@@ -44,9 +44,7 @@ mount "$EFI" /mnt/boot/efi
 
 # Pacotes principais
 pacman -Sy archlinux-keyring --noconfirm
-#rm -f /var/cache/pacman/pkg/*.part
-#rm -f /var/cache/pacman/pkg/libspqr* /var/cache/pacman/pkg/libbgm*
-pacman -Syu --noconfirm
+rm -f /var/cache/pacman/pkg/*.zst
 pacstrap /mnt base linux linux-firmware vim sudo networkmanager grub efibootmgr os-prober mtools dosfstools
 
 # fstab
