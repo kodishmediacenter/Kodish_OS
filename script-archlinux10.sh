@@ -139,7 +139,7 @@ systemctl enable lightdm
 # Extras
 pacman -S --noconfirm alsa-utils
 pacman -S --noconfirm pipewire pipewire-pulse wireplumber zenity jq lutris
-pacman -S --noconfirm noto-fonts-cjk
+pacman -S --noconfirm noto-fonts-cjk kodi kodi-addon-inputstream-adaptive
 
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
