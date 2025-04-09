@@ -133,6 +133,7 @@ XML
 
 # Permissões de usuário
 chown -R kodish:kodish /home/kodish/.config
+systemctl enable lightdm
 
 EOF
 
