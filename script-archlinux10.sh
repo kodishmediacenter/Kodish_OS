@@ -85,8 +85,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -Sy --noconfirm xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xfce4-whiskermenu-plugin
 
 # Define XFCE como sessão padrão
-echo "exec startxfce4" > /home/kodish/.xinitrc
-chown kodish:kodish /home/kodish/.xinitrc
+# echo "exec startxfce4" > /home/kodish/.xinitrc
+# chown kodish:kodish /home/kodish/.xinitrc
 
 # Ativa LightDM
 systemctl enable lightdm
