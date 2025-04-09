@@ -137,11 +137,14 @@ chown -R kodish:kodish /home/kodish/.config
 systemctl enable lightdm
 
 # Extras
-pacman -S alsa-utils
-pacman -S pipewire pipewire-pulse wireplumber
+pacman -S --noconfirm alsa-utils
+pacman -S --noconfirm pipewire pipewire-pulse wireplumber zenity jq
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
-#
+# Flatpak 
+flatpak install flathub com.google.Chrome
+
+# Remover pacotes 
 pacman -Rs xfce4-dict 
 pacman -Rs ristretto 
 pacman -Rs parole
