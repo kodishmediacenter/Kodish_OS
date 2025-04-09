@@ -145,6 +145,8 @@ systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # Flatpak 
 flatpak install flathub com.google.Chrome
+flatpak install flathub com.heroicgameslauncher.hgl
+flatpak install flathub com.vysp3r.ProtonPlus
 
 # Remover pacotes 
 pacman -Rs xfce4-dict 
