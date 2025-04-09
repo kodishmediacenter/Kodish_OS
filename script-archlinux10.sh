@@ -101,6 +101,7 @@ pacman -S --noconfirm steam lib32-mesa lib32-libglvnd lib32-vulkan-icd-loader
 
 # Codecs multimídia
 pacman -S --noconfirm gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg
+pacman -S --noconfirm firefox flatpak gparted
 
 # Whisker Menu no painel do XFCE
 mkdir -p /home/kodish/.config/xfce4/xfconf/xfce-perchannel-xml
