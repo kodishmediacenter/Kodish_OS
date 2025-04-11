@@ -155,6 +155,8 @@ pacman -Rs ristretto
 pacman -Rs parole
 pacman -Rs bvnc 
 
+# Instalar openbox
+pacman -S --noconfirm openbox
 EOF
 
 # ✅ Fim
