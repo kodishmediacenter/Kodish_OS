@@ -140,26 +140,18 @@ systemctl enable lightdm
 pacman -S --noconfirm alsa-utils
 pacman -S --noconfirm pipewire pipewire-pulse wireplumber zenity jq lutris
 pacman -S --noconfirm noto-fonts-cjk kodi kodi-addon-inputstream-adaptive
-
+pacman -S --noconfirm openbox arandr
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
-# Flatpak 
-flatpak install flathub com.google.Chrome
-flatpak install flathub com.heroicgameslauncher.hgl
-flatpak install flathub com.vysp3r.ProtonPlus
-#flatpak install flathub net.retrodeck.retrodeck
-flatpak install flathub com.stremio.Stremio
-flatpak install flathub dev.aunetx.deezer
-flatpak install flathub com.github.louis77.tuner
+# baixar complementos 
 
-# Remover pacotes 
-pacman -Rs xfce4-dict 
-pacman -Rs ristretto 
-pacman -Rs parole
-pacman -Rs bvnc 
+mkdir /kodish
+mkdir /kodish/scripts
+cd /kodish/scripts
+wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/flatpaks.sh 
+chmod +x flatpaks.sh
 
-# Instalar openbox
-pacman -S --noconfirm openbox arandr
+
 EOF
 
 # ✅ Fim
