@@ -197,17 +197,9 @@ pacman -S --noconfirm openbox arandr
 pacman -S --noconfirm wget
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
-
-# baixar complementos 
-
-mkdir /kodish
-mkdir /kodish/scripts
-cd /kodish/scripts
-chmod 7777 /kodish/scripts
-wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/flatpaks.sh 
-chmod +x flatpaks.sh
-echo ""  >> /home/kodish/.bashrc
-echo "alias extras='sh /kodish/scripts/flatpacks.sh'" >> /home/kodish/.bashrc
+# Script para para colocar nome da Distro 
+wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/scripts-kodish-gamer/name.sh
+sh name.sh
 
 
 
