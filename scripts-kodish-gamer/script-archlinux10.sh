@@ -195,6 +195,7 @@ pacman -S --noconfirm pipewire pipewire-pulse wireplumber zenity jq lutris
 pacman -S --noconfirm noto-fonts-cjk kodi kodi-addon-inputstream-adaptive
 pacman -S --noconfirm openbox arandr
 pacman -S --noconfirm wget
+pacman -S --noconfirm file-roller unzip unrar p7zip
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # Script para para colocar nome da Distro 
