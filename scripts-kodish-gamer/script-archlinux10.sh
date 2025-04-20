@@ -206,6 +206,10 @@ cd  /home/kodish/"Área de trabalho"
 wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/scripts-kodish-gamer/deckloader.desktop
 chmod 7777 deckloader.desktop
 
+# Atualizar Teclado para pt-br 
+wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/scripts-kodish-gamer/keyboardbr.sh
+sh keyboardbr.sh
+
 # atualizar alias 
 echo "alias update='sudo pacman -Syu && flatpak update -y'" >> ~/.bashrc
 
