@@ -201,6 +201,11 @@ systemctl --user enable --now pipewire pipewire-pulse wireplumber
 wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/scripts-kodish-gamer/name.sh
 sh name.sh
 
+# Baixar Atalho deskloader 
+cd  /home/kodish/"Área de trabalho"
+wget https://raw.githubusercontent.com/kodishmediacenter/Kodish_OS/refs/heads/master/scripts-kodish-gamer/deckloader.desktop
+chmod 7777 deckloader.desktop
+
 
 
 EOF
