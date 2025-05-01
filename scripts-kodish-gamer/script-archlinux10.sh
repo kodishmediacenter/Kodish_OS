@@ -196,6 +196,7 @@ pacman -S --noconfirm noto-fonts-cjk kodi kodi-addon-inputstream-adaptive
 pacman -S --noconfirm openbox arandr
 pacman -S --noconfirm wget
 pacman -S --noconfirm file-roller unzip unrar p7zip
+pacman -S --noconfirm file-roller neofetch
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # Script para para colocar nome da Distro 
@@ -213,6 +214,8 @@ sh keyboardbr.sh
 
 # atualizar alias 
 echo "alias update='sudo pacman -Syu && flatpak update -y'" >> ~/.bashrc
+echo "alias iftk='f() { app_id=\${1##*/}; flatpak install  \"\$app_id\" -y; }; f'" >> ~/.bashrc
+echo "alias ftk='sudo pacman -S install'" >> ~/.bashrc
 
 EOF
 
