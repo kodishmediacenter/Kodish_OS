@@ -216,6 +216,7 @@ sh keyboardbr.sh
 echo "alias update='sudo pacman -Syu && flatpak update -y'" >> ~/.bashrc
 echo "alias iftk='f() { app_id=\${1##*/}; flatpak install  \"\$app_id\" -y; }; f'" >> ~/.bashrc
 echo "alias ftk='sudo pacman -S install'" >> ~/.bashrc
+echo "alias upgrade='sudo pacman -Syu'" >> ~/.bashrc
 
 EOF
 
